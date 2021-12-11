@@ -62,9 +62,7 @@ export function RequestTool() {
         </Button>
       </div>
       <hr />
-      <p>
-        <pre>{response || ""}</pre>
-      </p>
+      <pre>{response || ""}</pre>
     </div>
   );
 }

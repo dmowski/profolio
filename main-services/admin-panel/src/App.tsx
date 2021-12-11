@@ -16,6 +16,7 @@ export default function App() {
           <div className="container pt-4">
             <Alert />
             <Routes>
+              <Route path="/" element={<TestApiPage />} />
               <Route path="/customers" element={<CustomersPage />} />
               <Route path="/test-api" element={<TestApiPage />} />
               <Route path="/admin-pofile" element={<AdminProfilePage />} />
