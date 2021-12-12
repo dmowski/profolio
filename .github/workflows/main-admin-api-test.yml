@@ -1,0 +1,38 @@
+name: main-admin-panel-api-test
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  run-linters:
+    name: main-admin-panel-api-lint
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - working-directory: ./main-services/admin-panel-api
+      - run: npm ci
+      - run: npm lint      
+  
+  test:
+    name: main-admin-panel-api-test
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - working-directory: ./main-services/admin-panel-api
+      - run: npm ci
+      - run: npm run test
