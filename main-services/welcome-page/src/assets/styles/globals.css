@@ -1,0 +1,16 @@
+html,
+body {
+  background-color: #e5e5e5;
+  font-family: var(--font-family);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+:root {
+  --white: white;
+  --blue: #1068eb;
+  --font-family: "Roboto", sans-serif;
+}
