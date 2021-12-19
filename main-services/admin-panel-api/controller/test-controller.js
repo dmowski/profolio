@@ -25,6 +25,15 @@ router.get("/users", keycloak.protect(), async function (req, res) {
   }
 });
 
+router.get("/keycloak-by-username", function (req, res) {
+  res.status(200).json({
+    urlToGetTokens:
+      "http://localhost:8080/auth/realms/MainAdminRealm/protocol/openid-connect/token",
+    clientId: "main-keycloak-client",
+    redirectUrl: "http://customer.profolio.com/",
+  });
+});
+
 router.get("/admin", keycloak.protect("admin"), function (req, res) {
   res.send("Hello Admin");
 });
