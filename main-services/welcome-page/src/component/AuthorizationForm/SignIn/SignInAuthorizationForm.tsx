@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../AuthorizationForm.module.css";
-import { Button, InputWithTitle } from "../../";
+import { Button, Input } from "../../";
 import { NavLink } from "react-router-dom";
 
 export const SignInAuthorizationForm = (): JSX.Element => {
@@ -8,9 +8,9 @@ export const SignInAuthorizationForm = (): JSX.Element => {
     <div className={styles.wrapper}>
       <h1 className={styles.title}>Sign In</h1>
 
-      <InputWithTitle title={"Email"} valuePlaceholder={"Email.."} />
+      <Input title={"Email"} valuePlaceholder={"Email.."} />
 
-      <InputWithTitle title={"Password"} valuePlaceholder={"Password.."} />
+      <Input title={"Password"} valuePlaceholder={"Password.."} />
       <NavLink to={"/recovery-password"}>
         <span>Forgot password?</span>
       </NavLink>

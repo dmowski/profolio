@@ -1,7 +1,11 @@
 import { InputProps } from "./Input.types";
 import styles from "./Input.module.css";
-import classNames from "classnames";
 
-export const Input = ({ className, ...props }: InputProps): JSX.Element => {
-  return <input className={classNames(className, styles.input)} {...props} type="text" />;
+export const Input = ({ valuePlaceholder, title, ...props }: InputProps): JSX.Element => {
+  return (
+    <div className={styles.wrapper}>
+      <span className={styles.span}>{title}</span>
+      <input placeholder={valuePlaceholder} className={styles.input} {...props} type="text" />
+    </div>
+  );
 };

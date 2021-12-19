@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../AuthorizationForm.module.css";
-import { Button, InputWithTitle } from "../../";
+import { Button, Input } from "../../";
 
 export const RecoveryPasswordAuthorizationForm = (): JSX.Element => {
   return (
@@ -9,7 +9,7 @@ export const RecoveryPasswordAuthorizationForm = (): JSX.Element => {
 
       <span className={styles.forgotSpan}>Tell us your email so we can send you a reset link</span>
 
-      <InputWithTitle title={"Email"} valuePlaceholder={"Email.."} />
+      <Input title={"Email"} valuePlaceholder={"Email.."} />
 
       <Button color={"blue"} className={styles.button}>
         Recover password
