@@ -24,6 +24,15 @@ body {
   --color-functional-info: #017aad;
   --color-additional-additional-1: #105fd5;
   --color-additional-additional-2: #1055bb;
+  --font-size-primary-display: 60px;
+  --font-size-primary-large: 48px;
+  --font-size-primary-normal: 32px;
+  --font-size-primary-small: 24px;
+  --font-size-body-normal: 18px;
+  --font-size-body-small: 16px;
+  --font-size-body-extra-small: 14px;
+  --font-size-link-normal: 16px;
+  --font-size-link-small: 14px;
 }
 
 .page-content {
