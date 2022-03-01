@@ -1,8 +1,6 @@
 import { styled } from "@mui/material/styles";
 import { Checkbox as MaterialCheckBox } from "@mui/material";
 
-const CustomCheckbox = styled(MaterialCheckBox)(() => ({}));
-
 const CheckboxIcon = styled("span")(() => ({
   display: "grid",
   placeItems: "center",
@@ -45,7 +43,7 @@ const CheckboxChecked = () => (
 
 export function Checkbox({ ...props }): JSX.Element {
   return (
-    <CustomCheckbox
+    <MaterialCheckBox
       sx={{
         p: "12px",
       }}
