@@ -1,15 +1,16 @@
 import { styled } from "@mui/material/styles";
 import { Checkbox as MaterialCheckBox } from "@mui/material";
+import { CheckboxProps } from "@mui/material/Checkbox";
 
 const CheckboxIcon = styled("span")(() => ({
   display: "grid",
   placeItems: "center",
-  margin: 2,
-  paddingTop: 2,
-  width: 20,
-  height: 20,
+  margin: "2px",
+  paddingTop: "2px",
+  width: "20px",
+  height: "20px",
   border: "1px solid var(--color-neutral-6)",
-  borderRadius: 4,
+  borderRadius: "4px",
   backgroundColor: "var(--color-neutral-1)",
   color: "var(--color-neutral-1)",
 
@@ -41,7 +42,7 @@ const CheckboxChecked = () => (
   </CheckboxIcon>
 );
 
-export function Checkbox({ ...props }): JSX.Element {
+export function Checkbox(props: CheckboxProps): JSX.Element {
   return (
     <MaterialCheckBox
       sx={{
