@@ -5,6 +5,10 @@ body {
   font-size: 62.5%;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --font-family: "Roboto", sans-serif;
   --color-theme-primary: #1068eb;
